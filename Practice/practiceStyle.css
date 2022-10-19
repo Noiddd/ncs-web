@@ -1,0 +1,49 @@
+.border {
+  display: flex;
+  flex-direction: column;
+}
+
+.row1 {
+  display: flex;
+}
+
+.row2 {
+  display: flex;
+}
+
+.row3 {
+  display: flex;
+}
+
+.row4 {
+  display: flex;
+}
+
+.row5 {
+  display: flex;
+}
+
+.row6 {
+  display: flex;
+}
+
+.row7 {
+  display: flex;
+}
+
+.row8 {
+  display: flex;
+}
+
+.boxes {
+  width: 125px;
+  height: 125px;
+  border: 1px solid black;
+}
+
+.boxes1 {
+  width: 125px;
+  height: 125px;
+  border: 1px solid black;
+  background-color: black;
+}
