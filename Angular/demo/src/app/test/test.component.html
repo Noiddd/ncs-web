@@ -1,10 +1,5 @@
-<input
-  type="text"
-  id="{{ nameVar }}"
-  name="name"
-  value="dion"
-  [disabled]="isDisabled"
-/>
-
-<h1 class="red">Hello Welcome</h1>
-<h1 [class]="textColor">This is Dion's Angular Page</h1>
+<h1>Hello Welcome</h1>
+<h1 [ngStyle]="allStyles">This is Dion's Angular Page</h1>
+<h1 [class]="getColor">Change Color Button</h1>
+<button (click)="green()">Click me for green</button>
+<button (click)="red()">Click me for red</button>

@@ -6,13 +6,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test.component.css'],
 })
 export class TestComponent implements OnInit {
-  message = 'glad you are back - from the class';
+  color = 'green';
 
-  public nameVar: any;
+  colorValue = false;
+  greenColor = 'green';
+  blueColor = 'blue';
+  txt = 0.5;
 
-  textColor = 'green';
+  getColor = 'black';
 
-  isDisabled = false;
+  allStyles = {
+    color: this.greenColor,
+    fontStyle: 'italic',
+    opacity: this.txt,
+  };
+
+  green() {
+    this.getColor = 'green';
+  }
+  red() {
+    this.getColor = 'red';
+  }
 
   constructor() {}
 
