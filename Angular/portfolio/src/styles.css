@@ -14,6 +14,7 @@ body {
   height: 100vh;
   width: 100%;
   background: #faf8eb;
+  overflow: hidden;
 }
 
 nav {
@@ -31,6 +32,10 @@ nav {
   cursor: pointer;
 }
 
+nav ul {
+  margin-left: 50px;
+}
+
 nav ul li {
   list-style: none;
   display: inline-block;
@@ -45,7 +50,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: grey;
+  color: white;
   transition: 0.3s;
 }
 
@@ -91,7 +96,43 @@ header {
 
 .readingman {
   position: absolute;
-  top: 100px;
+  top: 350px;
+  right: 380px;
+  width: 40%;
+}
+
+.aboutme-content {
+  position: absolute;
+  top: 150px;
+  left: 320px;
+  width: 50%;
+  text-align: center;
+}
+
+.aboutme-content .aboutme-desc {
+  font-size: 20px;
+}
+
+.aboutme-content .aboutme-tech {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.aboutme-li {
+  list-style: none;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.aboutme-li:hover {
+  color: #d44147;
+  transition: 0.3s;
+}
+
+.aboutme-ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .content {
