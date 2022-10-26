@@ -1,0 +1,11 @@
+<input type="text" placeholder="Enter Name" #name />
+<input type="text" placeholder="Enter Age" #age />
+<input type="text" placeholder="Enter Job" #job />
+<button (click)="logData(name.value, age.value, job.value)">Click Here</button>
+<app-test123
+  [name]="inputName"
+  [age]="inputAge"
+  [job]="inputJob"
+  (childEmitter)="msg = $event"
+></app-test123>
+{{ msg }}
