@@ -6,19 +6,20 @@ import { AppComponent } from './app.component';
 import { EmpListComponent } from './emp-list/emp-list.component';
 import { EmpDeptListComponent } from './emp-dept-list/emp-dept-list.component';
 import { AllEmpDataComponent } from './all-emp-data/all-emp-data.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmpListComponent,
     EmpDeptListComponent,
-    AllEmpDataComponent
+    AllEmpDataComponent,
+    PageNotFoundComponent,
+    IndexComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
