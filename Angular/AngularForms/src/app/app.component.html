@@ -1,0 +1,25 @@
+<form action="">
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label>Email</label>
+    <input type="text" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label>User Name</label>
+    <input type="text" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label>Password</label>
+    <input type="passowrd" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <select name="country" ngModule="" class="custom-select">
+      <option value="">Select the country</option>
+      <option *ngFor="let c of countries">{{ c }}</option>
+    </select>
+  </div>
+</form>
