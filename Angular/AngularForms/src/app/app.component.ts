@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from './user';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   countries = ['Singapore', 'Korea'];
+
+  public test = new User(
+    'Dion',
+    'dion@gmail.com',
+    43434343,
+    'password',
+    'singapore',
+    'male',
+    true
+  );
 }

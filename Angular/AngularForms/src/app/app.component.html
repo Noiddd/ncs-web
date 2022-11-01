@@ -1,12 +1,35 @@
-<form action="">
+{{ test | json }}
+<form #userForm="ngForm">
   <div class="form-group">
     <label>Name</label>
-    <input type="text" class="form-control" />
+    <input
+      name="name"
+      #name="ngModel"
+      type="text"
+      [(ngModel)]="test.name"
+      class="form-control"
+      required
+    />
   </div>
+  <small style="color: red" [hidden]="name.valid"
+    >Name is a required feild</small
+  >
+
   <div class="form-group">
     <label>Email</label>
-    <input type="text" class="form-control" />
+    <input
+      type="text"
+      class="form-control"
+      name="email"
+      #email="ngModel"
+      [(ngModel)]="test.email"
+      required
+    />
   </div>
+  <small style="color: red" [hidden]="email.valid"
+    >Email is a required feild</small
+  >
+
   <div class="form-group">
     <label>User Name</label>
     <input type="text" class="form-control" />
@@ -22,4 +45,6 @@
       <option *ngFor="let c of countries">{{ c }}</option>
     </select>
   </div>
+
+  <button type="submit" name="submit">Submit</button>
 </form>
