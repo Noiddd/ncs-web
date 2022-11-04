@@ -124,10 +124,14 @@
       <header>
         <nav>
           <h2 class="logo">RemoteDev</h2>
-          <div>
-            <a href="#" class="loginregbtn">Login/Register</a>
-            <a href="#" class="postjobbtn">Post a Job</a>
-          </div>
+
+          <ul>
+            <li>
+              <a href="#">Job List</a>
+            </li>
+          </ul>
+
+          <a href="#" class="postjobbtn">Profile</a>
         </nav>
       </header>
     </div>
@@ -139,58 +143,3 @@
     <script></script>
   </body>
 </html>
-
-<!-- 
-Job-Portal Datebase
-
-Table: Employer
-- id (auto generate)
-- name
-- email
-- employer_username
-- employer_password
-
-Table: Job_Seeker
-- id (auto generate)
-- name
-- email
-- jobseeker_username
-- jobseeker_password
-- contact_number
-- years_of_experience
-- description
-
-
-Table: Job_List
-- id (auto generate)
-- role (var char(200))
-- description
-- salary
-- years_of_experience
-- primary_tag (select drop down) (used as filter)
-- secondary_tag (select drop down) (used as filter)
-- status
-- employer_id (foriegn key)
-- jobseekers_id (foriegn key) 
-
-
-CREATE TABLE `course_instructor` (
-  `course_id` int(11) NOT NULL,
-  `instructor_id` int(11) NOT NULL,
-  
-  PRIMARY KEY (`course_id`,`instructor_id`),
-  
-  KEY `FK_INSTRUCTOR_idx` (`instructor_id`),
-  
-  CONSTRAINT `FK_COURSE_05` FOREIGN KEY (`course_id`) 
-  REFERENCES `course` (`id`) 
-  ON DELETE NO ACTION ON UPDATE NO ACTION,
-  
-  CONSTRAINT `FK_INSTRUCTOR` FOREIGN KEY (`instructor_id`) 
-  REFERENCES `instructor` (`id`) 
-  ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-
-
- -->
