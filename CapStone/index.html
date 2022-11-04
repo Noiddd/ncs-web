@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CapStone</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        position: relative;
+      }
+
+      .hero {
+        height: 100vh;
+        width: 100%;
+        background: #3aafa9;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 2%;
+        padding-left: 2%;
+      }
+
+      .logo {
+        color: white;
+        font-size: 35px;
+        letter-spacing: 1px;
+        cursor: pointer;
+      }
+
+      nav ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 0px 25px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      nav ul li a:hover {
+        color: #17252a;
+        transition: 0.3s;
+      }
+
+      .postjobbtn {
+        background: #17252a;
+        text-decoration: none;
+        border: 2px solid #17252a;
+        border-radius: 30px;
+        padding: 12px 25px;
+        color: white;
+        border-radius: 30px;
+        font-size: 14px;
+        font-weight: bold;
+        margin-left: 20px;
+      }
+
+      .postjobbtn:hover {
+        background: white;
+        color: #17252a;
+        transition: 0.3s;
+        border: 2px solid white;
+      }
+
+      .loginregbtn {
+        background: #17252a;
+        text-decoration: none;
+        border: 2px solid #17252a;
+        border-radius: 30px;
+        padding: 12px 25px;
+        color: white;
+        border-radius: 30px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .loginregbtn:hover {
+        background: white;
+        color: #17252a;
+        transition: 0.3s;
+        border: 2px solid white;
+      }
+
+      header {
+        width: 92%;
+        margin: 0 auto;
+        padding: 15px 0;
+        position: absolute;
+        top: 40px;
+        left: 30px;
+        right: 30px;
+        border: none;
+        z-index: 2;
+      }
+
+      .title {
+        position: absolute;
+        top: 200px;
+        left: 43%;
+
+        text-align: center;
+      }
+
+      .title h3 {
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <header>
+        <nav>
+          <h2 class="logo">RemoteDev</h2>
+          <div class="">
+            <a href="#" class="loginregbtn">Login/Register</a>
+            <a href="#" class="postjobbtn">Post a Job</a>
+          </div>
+        </nav>
+      </header>
+    </div>
+    <div class="title">
+      <h3>Find a Remote Job</h3>
+      <h3>Work from Anywhere</h3>
+    </div>
+
+    <script></script>
+  </body>
+</html>
+
+<!-- 
+Job-Portal Datebase
+
+Table: Employer
+- id (auto generate)
+- name
+- email
+- employer_username
+- employer_password
+
+Table: Job_Seeker
+- id (auto generate)
+- name
+- email
+- jobseeker_username
+- jobseeker_password
+- contact_number
+- years_of_experience
+- description
+
+
+Table: Job_List
+- id (auto generate)
+- role (var char(200))
+- description
+- salary
+- years_of_experience
+- primary_tag (select drop down) (used as filter)
+- secondary_tag (select drop down) (used as filter)
+- status
+- employer_id (foriegn key)
+- jobseekers_id (foriegn key) 
+
+
+CREATE TABLE `course_instructor` (
+  `course_id` int(11) NOT NULL,
+  `instructor_id` int(11) NOT NULL,
+  
+  PRIMARY KEY (`course_id`,`instructor_id`),
+  
+  KEY `FK_INSTRUCTOR_idx` (`instructor_id`),
+  
+  CONSTRAINT `FK_COURSE_05` FOREIGN KEY (`course_id`) 
+  REFERENCES `course` (`id`) 
+  ON DELETE NO ACTION ON UPDATE NO ACTION,
+  
+  CONSTRAINT `FK_INSTRUCTOR` FOREIGN KEY (`instructor_id`) 
+  REFERENCES `instructor` (`id`) 
+  ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+ -->
