@@ -4,75 +4,6 @@
     <meta charset="UTF-8" />
     <title>Form</title>
     <style>
-      html {
-        height: 100%;
-      }
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-        background-image: url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1583&q=80");
-        background-size: cover;
-      }
-
-      .intro {
-        font-family: system-ui, -apple-system, system-ui, "Helvetica Neue",
-          Helvetica, Arial, sans-serif;
-        font-size: 30px;
-        border-bottom: 5px double black;
-        margin-bottom: 40px;
-        padding-top: 50px;
-        padding-bottom: 30px;
-      }
-
-      .link {
-        align-items: center;
-        background-color: #ffffff;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        border-radius: 0.25rem;
-        box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-        box-sizing: border-box;
-        color: rgba(0, 0, 0, 0.85);
-        cursor: pointer;
-        display: inline-flex;
-        font-family: system-ui, -apple-system, system-ui, "Helvetica Neue",
-          Helvetica, Arial, sans-serif;
-        font-size: 16px;
-        font-weight: 600;
-        justify-content: center;
-        line-height: 1.25;
-        margin: 0;
-        min-height: 3rem;
-        padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
-        position: relative;
-        text-decoration: none;
-        transition: all 250ms;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-        vertical-align: baseline;
-        width: auto;
-      }
-
-      .link:hover,
-      .link:focus {
-        border-color: rgba(0, 0, 0, 0.15);
-        box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-        color: rgba(0, 0, 0, 0.65);
-      }
-
-      .link:hover {
-        transform: translateY(-1px);
-      }
-
-      .link:active {
-        background-color: #f0f0f1;
-        border-color: rgba(0, 0, 0, 0.15);
-        box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
-        color: rgba(0, 0, 0, 0.65);
-        transform: translateY(0);
-      }
-
       * {
         padding: 0;
         margin: 0;
@@ -82,13 +13,12 @@
 
       body {
         position: relative;
-        background-image: url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1583&q=80");
-        background-size: cover;
       }
 
       .hero {
         height: 100vh;
         width: 100%;
+        background: #3aafa9;
       }
 
       nav {
@@ -100,11 +30,10 @@
       }
 
       .logo {
-        color: #23201f;
+        color: white;
         font-size: 35px;
         letter-spacing: 1px;
         cursor: pointer;
-        text-decoration: none;
       }
 
       nav ul li {
@@ -114,34 +43,53 @@
       }
 
       nav ul li a {
-        color: #23201f;
+        color: white;
         text-decoration: none;
         font-size: 15px;
         font-weight: bold;
       }
 
       nav ul li a:hover {
-        color: grey;
+        color: #17252a;
         transition: 0.3s;
       }
 
-      .cvbtn {
-        background: transparent;
+      .postjobbtn {
+        background: #17252a;
         text-decoration: none;
-        border: 2px solid #23201f;
+        border: 2px solid #17252a;
         border-radius: 30px;
         padding: 12px 25px;
-        color: #23201f;
+        color: white;
         border-radius: 30px;
         font-size: 14px;
         font-weight: bold;
-        margin-left: 80px;
+        margin-left: 20px;
       }
 
-      .cvbtn:hover {
-        background: #23201f;
-        color: white;
+      .postjobbtn:hover {
+        background: white;
+        color: #17252a;
         transition: 0.3s;
+        border: 2px solid white;
+      }
+
+      .loginregbtn {
+        background: #17252a;
+        text-decoration: none;
+        border: 2px solid #17252a;
+        border-radius: 30px;
+        padding: 12px 25px;
+        color: white;
+        border-radius: 30px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .loginregbtn:hover {
+        background: white;
+        color: #17252a;
+        transition: 0.3s;
+        border: 2px solid white;
       }
 
       header {
@@ -152,51 +100,20 @@
         top: 40px;
         left: 30px;
         right: 30px;
-        border-radius: 50px;
+        border: none;
         z-index: 2;
-        background: white;
       }
 
-      .dropdown-content {
-        display: none;
+      .title {
         position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-        right: 6px;
-        top: 57px;
-        border-radius: 10px;
+        top: 200px;
+        left: 43%;
+
+        text-align: center;
       }
 
-      .dropdown-content a {
-        float: none;
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: left;
-      }
-
-      .dropdown-content a:hover {
-        background-color: #ddd;
-      }
-
-      .dropdown:hover .dropdown-content {
-        display: block;
-      }
-
-      .register-link {
-        color: white;
-        text-decoration: none;
-      }
-
-      .register-link:hover {
-        color: #03e9f4;
-      }
-
-      .link-container {
-        margin-bottom: 10px;
+      .title h3 {
+        font-size: 25px;
       }
 
       .login-box {
@@ -230,18 +147,6 @@
         position: relative;
       }
 
-      /* .login-box .user-box input {
-  width: 100%;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  margin-bottom: 30px;
-  border: none;
-  border-bottom: 1px solid #fff;
-  outline: none;
-  background: transparent;
-} */
-
       .inputField {
         width: 100%;
         padding: 10px 0;
@@ -264,16 +169,6 @@
         pointer-events: none;
         transition: 0.5s;
       }
-      /* .login-box .user-box label {
-  position: absolute;
-  top:0;
-  left: 0;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  pointer-events: none;
-  transition: .5s;
-} */
 
       .inputField:focus ~ label,
       .inputField:valid ~ label {
@@ -282,14 +177,6 @@
         color: #03e9f4;
         font-size: 12px;
       }
-
-      /* .login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
-  top: -20px;
-  left: 0;
-  color: #03e9f4;
-  font-size: 12px;
-} */
 
       #name-error {
         border-bottom: 1px solid red;
@@ -360,18 +247,13 @@
     <div class="hero">
       <header>
         <nav>
-          <h2>
-            <a class="logo" href="/Car_Service_System/loginSuccess.jsp"
-              >DION'S WORKSHOP</a
-            >
-          </h2>
+          <h2 class="logo">RemoteDev</h2>
         </nav>
       </header>
     </div>
 
     <div class="login-box">
-      <h1>Dion's Workshop</h1>
-      <h2>Register</h2>
+      <h2>Job Seeker Register</h2>
 
       <form
         action="/Car_Service_System/Register"
@@ -433,6 +315,51 @@
               onchange="validateEmail()"
             />
             <label class="label emailLabel">Email</label>
+          </div>
+        </div>
+
+        <div class="input-control">
+          <div id="contact-error"></div>
+          <div class="user-box">
+            <input
+              type="text"
+              name="contact"
+              class="inputField contactField"
+              required
+              id="contactId"
+              onchange="validateContact()"
+            />
+            <label class="label contactLabel">Contact</label>
+          </div>
+        </div>
+
+        <div class="input-control">
+          <div id="yoe-error"></div>
+          <div class="user-box">
+            <input
+              type="text"
+              name="yoe"
+              class="inputField yoeField"
+              required
+              id="yoeId"
+              onchange="validateYoe()"
+            />
+            <label class="label yoeLabel">Years of Experience</label>
+          </div>
+        </div>
+
+        <div class="input-control">
+          <div id="awDescription-error"></div>
+          <div class="user-box">
+            <input
+              type="text"
+              name="awDescription"
+              class="inputField awDescriptionField"
+              required
+              id="awDescriptionId"
+              onchange="validateAwDescription()"
+            />
+            <label class="label emailLabel">Academic/Work Description</label>
           </div>
         </div>
 
