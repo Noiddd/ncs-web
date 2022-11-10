@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      position: relative;
+    }
+
+    .hero {
+      height: 100vh;
+      width: 100%;
+      background: #3aafa9;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 2%;
+      padding-left: 2%;
+    }
+
+    .logo {
+      color: white;
+      font-size: 35px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    nav ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 0px 25px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #17252a;
+      transition: 0.3s;
+    }
+
+    .postjobbtn {
+      background: #17252a;
+      text-decoration: none;
+      border: 2px solid #17252a;
+      border-radius: 30px;
+      padding: 12px 25px;
+      color: white;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-left: 20px;
+    }
+
+    .postjobbtn:hover {
+      background: white;
+      color: #17252a;
+      transition: 0.3s;
+      border: 2px solid white;
+    }
+
+    .loginregbtn {
+      background: #17252a;
+      text-decoration: none;
+      border: 2px solid #17252a;
+      border-radius: 30px;
+      padding: 12px 25px;
+      color: white;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .loginregbtn:hover {
+      background: white;
+      color: #17252a;
+      transition: 0.3s;
+      border: 2px solid white;
+    }
+
+    header {
+      width: 92%;
+      margin: 0 auto;
+      padding: 15px 0;
+      position: absolute;
+      top: 40px;
+      left: 30px;
+      right: 30px;
+      border: none;
+      z-index: 2;
+    }
+
+    .title {
+      position: absolute;
+      top: 200px;
+      left: 43%;
+
+      text-align: center;
+    }
+
+    .title h3 {
+      font-size: 25px;
+    }
+
+    .login-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 400px;
+      padding: 40px;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.5);
+      box-sizing: border-box;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+    }
+
+    .login-box h2 {
+      margin: 0 0 30px;
+      padding: 0;
+      color: #fff;
+      text-align: center;
+    }
+
+    .login-box h1 {
+      margin: 0 0 30px;
+      padding: 0;
+      color: #fff;
+      text-align: center;
+    }
+
+    .login-box .user-box {
+      position: relative;
+    }
+
+    .inputField {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 30px;
+      border: none;
+      border-bottom: 1px solid #fff;
+      outline: none;
+      background: transparent;
+    }
+
+    .label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #fff;
+      pointer-events: none;
+      transition: 0.5s;
+    }
+
+    .inputField:focus ~ label,
+    .inputField:valid ~ label {
+      top: -20px;
+      left: 0;
+      color: #03e9f4;
+      font-size: 12px;
+    }
+
+    #password-error {
+      border-bottom: 1px solid red;
+      color: red;
+      margin-bottom: 15px;
+      display: none;
+      font-size: 10px;
+    }
+
+    .error-label {
+      color: red;
+    }
+    .error:focus ~ label,
+    .error:valid ~ label {
+      top: -20px;
+      left: 0;
+      color: red;
+      font-size: 12px;
+    }
+
+    .submit-btn {
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      color: #03e9f4;
+      font-size: 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+      overflow: hidden;
+      transition: 0.5s;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      letter-spacing: 4px;
+      background: transparent;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      
+
+
+    }
+
+    .submit-btn:hover {
+      background: #03e9f4;
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+        0 0 100px #03e9f4;
+    }
+
+    .link-container {
+      margin-bottom: 10px;
+    }
+
+    .register-link {
+      color: white;
+      text-decoration: none;
+    }
+
+    .register-link:hover {
+      color: #03e9f4;
+    }
+
+    .form-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero">
+    <header>
+      <nav>
+        <h2>
+          <a class="logo" href="/Capstone/index.jsp">RemoteDevSG</a>
+        </h2>
+      </nav>
+    </header>
+  </div>
+
+  <div class="login-box">
+    <h2>Registration Success</h2>
+
+    <form action="/Capstone/job_seeker/login/login_job_seeker.html" name="registrationForm" id="form" class="form-container">
+      
+      <button class="submit-btn" type="submit">Login</button>
+      
+    </form>
+  </div>
+</body>
+</html>
